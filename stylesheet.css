@@ -1546,15 +1546,6 @@ body { color: #848484; }
  text-align: center;
  padding-bottom: 0px
 }
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 47% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #ffffff }
 }
 
 #about-wrapper {
@@ -1573,3 +1564,24 @@ body { color: #848484; }
   margin-top: 100px;
   min-width: 340px;
 }
+
+.typewriter2 h2 {
+  color: #000000;
+  font-family: "Raleway", monospace;
+  overflow: hidden;
+  border-right: 0.15em solid #000000;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0em;
+  animation: 
+    typing 3.7s steps(37, end),
+    blink-caret .3s step-end infinite;
+    animation-iteration-count: infinite;
+}
+
+.typewriter2 {
+ margin-top: 30px;
+ text-align: center;
+ padding-bottom: 0px
+}
+
