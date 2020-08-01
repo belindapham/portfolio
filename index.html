@@ -5,6 +5,14 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Google settings-->
+      {%- seo -%}
+      {%- feed_meta -%}
+      {%- if jekyll.environment == 'production' and site.google_analytics -%}
+      	{%- include google-analytics.html -%}
+      {%- endif -%}
+	  <meta property="og:image" content="https://raw.githubusercontent.com/belindapham/portfolio/master/images/Preview.png">
+	  <meta name="google-site-verification" content="bvQ6G2JSGMN2FHCI4YsSrms3Lzv2lImZWhvcF1Fvasc" />
   
       
     
@@ -460,12 +468,6 @@
 
 
 <title>Home &#8211; Belinda Pham</title>
-<meta property="og:description" content="Hello world! I'm Belinda. I’m a graduate from the Advanced Master at ESCP Europe with a focus Corporate & Investment Banking. I’m passionate about the integration of disruptive technologies in more traditional sectors and growing early-stage tech start-ups.">
-<meta property="og:image" content="https://raw.githubusercontent.com/belindapham/portfolio/master/images/Preview.png">
-<meta name="google-site-verification" content="bvQ6G2JSGMN2FHCI4YsSrms3Lzv2lImZWhvcF1Fvasc" />
-
-
-
 
 <link rel='dns-prefetch' href='//maps.googleapis.com' />
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
@@ -517,15 +519,16 @@ img.emoji {
 
 <script type='text/javascript' src="java/1.js"></script>
 <script type='text/javascript' src="java/2.js"></script>
+
 <script type='text/javascript'>
 /* <![CDATA[ */
 var LS_Meta = {"v":"6.1.6"};
 /* ]]> */
 </script>
+
 <script type='text/javascript' src="java/layerslider.js"></script>
 <script type='text/javascript' src="java/transition.js"></script>
 <script type='text/javascript' src="java/themepunch.js"></script>
-
 
 <!-- Social Icons-->
 <script src="https://kit.fontawesome.com/e6a202ce14.js" crossorigin="anonymous"></script>
@@ -534,7 +537,12 @@ var LS_Meta = {"v":"6.1.6"};
 
 <!--[if IE 9]> <script>var _gambitParallaxIE9 = true;</script> <![endif]--><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
 
-  </head>
+</head>
+
+
+
+
+
   <body class="page-template page-template-vase-page-templates page-template-template-contentSlider page-template-vase-page-templatestemplate-contentSlider-php page page-id-1524 page-child parent-pageid-2745 image-loading btn_rounded vase_hasMidnight  borderWidth vase_header_none wpb-js-composer js-comp-ver-5.1 vc_responsive" data-pagetransition="fadeInUpSmall" data-hasRowAnim="1" data-smoothscroll="1">
                       <div id="vase_pageShadow" class="text-middle">
                         <img class="zoomIn animated" src="images/logo_3.png" alt='Loading'>
