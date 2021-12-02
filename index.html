@@ -586,12 +586,86 @@ var LS_Meta = {"v":"6.1.6"};
 <!-- /.navbar-header -->
 
 
-<div class="collapse navbar-collapse" id="vase-navbarColapse">
+<!-- <div class="collapse navbar-collapse" id="vase-navbarColapse">
 <div class="menuWrapper"><ul id="vase_menu" class="nav navbar-nav navbar-right">
-<li id="menu-item-3415" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1524 current_page_item menu-item-3415"><a href="index.html" aria-current="page">About me</a></li>
-<!--<li id="menu-item-3537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3537"><a href="Projects.html">Projects</a></li>-->
-</ul></div></div>
+<li id="menu-item-3415" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1524 current_page_item menu-item-3415"><a href="index.html" aria-current="page">About me</a></li> -->
+<!-- <li id="menu-item-3537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3537"><a href="Projects.html">Projects</a></li>
+</ul></div></div> -->
 
+
+<!-- Notification box -->
+
+<script type="text/javascript">
+
+window.addEventListener('load', (event) => {
+    mailNotifSpawn()
+});
+
+
+var rotations = [
+  airdrop1Spawn,
+  airdrop2Spawn,
+  airdrop3Spawn
+]
+
+let i = 0
+
+
+function rotation() {
+  rotations[i]()
+  i++
+  if (i >= rotations.length) {
+    i = 0
+  }
+}
+
+
+
+//main =========
+var siteDesktop = document.getElementById("siteDesktop")
+
+//NOTIF - COLLECTIVE
+var divNotifications = document.createElement("div")
+divNotifications.setAttribute("id","notifications")
+
+siteDesktop.appendChild(divNotifications)
+// ============
+
+
+// MAIL NOTIF ===========
+function notifWelcome() {
+window.open("notifications/mail.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=300,width=400,height=400");
+
+  notifWelcomeImg.classList.add("opacity")
+
+  setTimeout(function(){
+    notifWelcomeImg.classList.remove("opacity")
+    notifWelcomeImg.remove()
+
+;
+}, 1000);
+
+setInterval(()=>{rotation();},20000);
+
+}
+
+var divAnimWelcome = document.createElement("div")
+divAnimWelcome.setAttribute("class", "anim")
+
+var notifWelcomeImg = document.createElement("img")
+notifWelcomeImg.setAttribute("class", "notif")
+notifWelcomeImg.setAttribute("src", "images/notifmail.png")
+notifWelcomeImg.setAttribute("onclick", "notifWelcome()")
+
+
+function mailNotifSpawn() {
+divAnimWelcome.appendChild(notifWelcomeImg)
+divNotifications.appendChild(divAnimWelcome)
+}
+//================
+
+
+</script>
 
 
 <!-- /.navbar-collapse -->
